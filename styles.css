@@ -71,13 +71,10 @@ body {
 .login-section {
     background-color: #f4f4f4;
     padding: 30px;
-    border-radius: 10px;
-    width: 30%;
-}
-
-.login-section h2 {
-    font-size: 1.5em;
-    margin-bottom: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    font-family: Arial, sans-serif;
 }
 
 .login-section form {
@@ -85,19 +82,36 @@ body {
     flex-direction: column;
 }
 
-.login-section input {
-    margin-bottom: 15px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+.login-section label {
+    font-weight: bold;
+    margin-bottom: 8px;
 }
 
-.login-section button {
+.login-section input[type="text"],
+.login-section input[type="password"] {
     padding: 10px;
-    background-color: #007eb6;
-    color: #fff;
-    border: none;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    width: 100%;
+    font-size: 1rem;
+}
+
+.password-container {
+    position: relative;
+}
+
+.password-container .show-password {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
     cursor: pointer;
+}
+
+.show-password img {
+    width: 20px;
+    height: 20px;
 }
 
 .remember-me {
@@ -106,19 +120,62 @@ body {
     margin-bottom: 15px;
 }
 
-.remember-me label {
-    margin-left: 10px;
+.remember-me input {
+    margin-right: 8px;
 }
 
-.additional-options, .passwordless {
-    margin-top: 10px;
+.sign-on-button {
+    padding: 12px;
+    background-color: #0062cc;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-bottom: 20px;
 }
 
-.additional-options a, .passwordless a {
+.sign-on-button:hover {
+    background-color: #0052a3;
+}
+
+.login-options {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    color: #0062cc;
+}
+
+.login-options a {
     text-decoration: none;
-    color: #007eb6;
-    font-size: 0.9em;
+    color: #0062cc;
 }
+
+.login-options a:hover {
+    text-decoration: underline;
+}
+
+.passwordless-option {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.passwordless-option a {
+    text-decoration: none;
+    color: #0062cc;
+    font-size: 0.9rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.passwordless-option img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
 
 .footer-links {
     display: flex;
