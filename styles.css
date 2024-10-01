@@ -134,12 +134,11 @@ body {
     padding: 12px;
     background-color: #0062cc;
     color: white;
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: bold;
     border: none;
     border-radius: 8px;
     cursor: pointer;
-    margin-bottom: 5px;
     align-items: center;
 }
 
