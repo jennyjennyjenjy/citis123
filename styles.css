@@ -134,12 +134,13 @@ body {
     padding: 12px;
     background-color: #0062cc;
     color: white;
-    font-size: 5rem;
+    font-size: 3rem;
     font-weight: bold;
     border: none;
     border-radius: 8px;
     cursor: pointer;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
+    align-items: center;
 }
 
 .sign-on-button:hover {
