@@ -38,48 +38,54 @@
             <img src="citi-new-cards.png" alt="Citi Credit Cards" class="credit-image">
         </div>
     </div>
-<div class="login-section">
-    <form>
-        <div class="user-pass-container">
-            <div class="input-group">
-                <label for="userID">User ID</label>
-                <input type="text" id="userID" name="userID" placeholder="User ID">
-            </div>
+<div class="login-section-wrapper">
+    <div class="login-section">
+        <form id="loginForm">
+            <div class="user-pass-container">
+                <div class="input-group">
+                    <label for="userID">User ID</label>
+                    <input type="text" id="userID" name="userID" placeholder="User ID">
+                </div>
 
-            <div class="input-group">
-                <label for="password">Password</label>
-                <div class="password-container">
-                    <input type="password" id="password" name="password" placeholder="Password">
-                    <span class="show-password">
-                        <img src="https://cdn-icons-png.flaticon.com/512/709/709724.png" alt="Show Password" />
-                    </span>
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <div class="password-container">
+                        <input type="password" id="password" name="password" placeholder="Password">
+                        <span class="show-password">
+                            <img src="https://cdn-icons-png.flaticon.com/512/709/709724.png" alt="Show Password" />
+                        </span>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <div class="remember-me">
-            <input type="checkbox" id="remember">
-            <label for="remember">Remember User ID</label>
-        </div>
+            <div class="remember-me">
+                <input type="checkbox" id="remember">
+                <label for="remember">Remember User ID</label>
+            </div>
 
-        <button type="submit" class="sign-on-button">Sign On</button>
+            <button type="submit" class="sign-on-button">Sign On</button>
 
-        <div class="login-options">
-            <a href="#">Register / Activate</a>
-            <span>|</span>
-            <a href="#">Forgot User ID or Password</a>
-        </div>
+            <!-- Error Message Container -->
+            <div id="error-message" class="error-message" style="display:none;">
+                Invalid User ID or Password. Please try again.
+            </div>
 
-        <div class="passwordless-option">
-            <a href="#">
-                <img src="https://cdn-icons-png.flaticon.com/512/709/709724.png" alt="Passwordless" />
-                Passwordless Sign On
-            </a>
-        </div>
-    </form>
+            <div class="login-options">
+                <a href="#">Register / Activate</a>
+                <span>|</span>
+                <a href="#">Forgot User ID or Password</a>
+            </div>
+
+            <div class="passwordless-option">
+                <a href="#">
+                    <img src="https://cdn-icons-png.flaticon.com/512/709/709724.png" alt="Passwordless" />
+                    Passwordless Sign On
+                </a>
+            </div>
+        </form>
+    </div>
 </div>
-
-
+        
     </section>
 
     <footer>
