@@ -40,28 +40,30 @@ body {
     background-color: #fff;
 }
 
-/* Flexbox layout for content and image */
+/* Adjusted flexbox layout for content and image */
 .content-wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-/* Adjust the left content to take 50% width */
+/* Decreased text size for the left content */
 .left-content {
-    max-width: 50%;
+    max-width: 45%; /* Reduce space for text */
+    font-size: 0.9rem; /* Decrease text size */
 }
 
-/* Adjust the cards section to take 45% width */
+/* Increased the size of the cards section */
 .cards {
-    max-width: 45%;
+    max-width: 55%; /* Increase the image container size */
 }
 
-/* Ensure image inside cards div fits its container */
+/* Ensure image inside cards div is bigger */
 .cards img {
-    width: 40px;
+    max-width: 100%;
     height: auto;
-    border-radius: 20px;
+    border-radius: 10px;
+    transform: scale(1.1); /* Slightly increase image size */
 }
 
 
