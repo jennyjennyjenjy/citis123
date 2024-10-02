@@ -49,13 +49,13 @@ body {
 
 /* Decreased text size for the left content */
 .left-content {
-    max-width: 40%; /* Reduce space for text */
+    max-width: 50%; /* Reduce space for text */
     
 }
 
 /* Increased the size of the cards section */
 .cards {
-    max-width: 60%; /* Increase the image container size */
+    max-width: 40%; /* Increase the image container size */
 }
 
 /* Ensure image inside cards div is bigger */
