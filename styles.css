@@ -60,10 +60,8 @@ body {
 
 /* Ensure image inside cards div is bigger */
 .cards img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-    transform: scale(1.1); /* Slightly increase image size */
+    max-width: 1024px;
+    max-height: 1024px; /* Slightly increase image size */
 }
 
 
