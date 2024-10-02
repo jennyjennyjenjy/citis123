@@ -55,12 +55,12 @@ body {
 
 /* Increased the size of the cards section */
 .cards {
-    max-width: 55%; /* Increase the image container size */
+    max-width:auto; /* Increase the image container size */
 }
 
 /* Ensure image inside cards div is bigger */
 .cards img {
-    max-width: 100%;
+    width: auto;
     height: auto;
     border-radius: 10px;
     transform: scale(1.1); /* Slightly increase image size */
