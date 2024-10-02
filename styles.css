@@ -49,18 +49,18 @@ body {
 
 /* Decreased text size for the left content */
 .left-content {
-    max-width: 45%; /* Reduce space for text */
-    font-size: 0.9rem; /* Decrease text size */
+    max-width: 50%; /* Reduce space for text */
+    
 }
 
 /* Increased the size of the cards section */
 .cards {
-    max-width:auto; /* Increase the image container size */
+    max-width: 45%; /* Increase the image container size */
 }
 
 /* Ensure image inside cards div is bigger */
 .cards img {
-    width: auto;
+    max-width: 100%;
     height: auto;
     border-radius: 10px;
     transform: scale(1.1); /* Slightly increase image size */
