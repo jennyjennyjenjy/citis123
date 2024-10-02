@@ -49,17 +49,17 @@ body {
 
 /* Adjust the left content to take 50% width */
 .left-content {
-    max-width: 30%;
+    max-width: 50%;
 }
 
 /* Adjust the cards section to take 45% width */
 .cards {
-    max-width: 60%;
+    max-width: 45%;
 }
 
 /* Ensure image inside cards div fits its container */
 .cards img {
-    max-width: 100%;
+    width: 40px;
     height: auto;
     border-radius: 20px;
 }
