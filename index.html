@@ -42,26 +42,38 @@
 
 
         <div class="login-section">
-            <form>
-                <h2>Sign On</h2>
-                <label for="userID">User ID</label>
-                <input type="text" id="userID" name="userID" placeholder="User ID">
-                <label for="password">Password</label>
-                <input type="password" id="password" name="password" placeholder="Password">
-                <div class="remember-me">
-                    <input type="checkbox" id="remember">
-                    <label for="remember">Remember User ID</label>
-                </div>
-                <button type="submit">Sign On</button>
-                <div class="additional-options">
-                    <a href="#">Register / Activate</a>
-                    <a href="#">Forgot User ID or Password</a>
-                </div>
-                <div class="passwordless">
-                    <a href="#">Passwordless Sign On</a>
-                </div>
-            </form>
+    <form>
+        <label for="userID">User ID</label>
+        <input type="text" id="userID" name="userID" placeholder="User ID">
+
+        <label for="password">Password</label>
+        <div class="password-container">
+            <input type="password" id="password" name="password" placeholder="Password">
+            <span class="show-password"><img src="https://cdn-icons-png.flaticon.com/512/709/709724.png" alt="Show Password" /></span>
         </div>
+
+        <div class="remember-me">
+            <input type="checkbox" id="remember">
+            <label for="remember">Remember User ID</label>
+        </div>
+
+        <button type="submit" class="sign-on-button">Sign On</button>
+
+        <div class="login-options">
+            <a href="#">Register / Activate</a>
+            <span>|</span>
+            <a href="#">Forgot User ID or Password</a>
+        </div>
+
+        <div class="passwordless-option">
+            <a href="#">
+                <img src="https://cdn-icons-png.flaticon.com/512/709/709724.png" alt="Passwordless" />
+                Passwordless Sign On
+            </a>
+        </div>
+    </form>
+</div>
+
     </section>
 
     <footer>
