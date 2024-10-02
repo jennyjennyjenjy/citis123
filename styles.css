@@ -40,9 +40,30 @@ body {
     background-color: #fff;
 }
 
-.left-content {
-    width: 60%;
+/* Flexbox layout for content and image */
+.content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
+
+/* Adjust the left content to take 50% width */
+.left-content {
+    max-width: 50%;
+}
+
+/* Adjust the cards section to take 45% width */
+.cards {
+    max-width: 45%;
+}
+
+/* Ensure image inside cards div fits its container */
+.cards img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
 
 .left-content h1 {
     font-size: 2.5em;
