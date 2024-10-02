@@ -60,10 +60,12 @@ body {
 
 /* Ensure image inside cards div is bigger */
 .cards img {
-    width: 300px; /* Increase width */
-    height: auto; /* Keep aspect ratio */
-    margin: 10px;
+    width: 500px; /* Significantly increase width */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Ensure image is treated as a block element */
+    margin: 20px auto; /* Center the image horizontally */
 }
+
 
 
 
