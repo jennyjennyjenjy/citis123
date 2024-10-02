@@ -1,40 +1,77 @@
-<div class="login-section">
-    <form>
-        <div class="user-pass-container">
-            <div class="input-group">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Citi Credit Cards</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <img src="citi-logo.png" alt="Citi Logo">
+            </div>
+            <div class="nav-links">
+                <a href="#">Credit Cards</a>
+                <a href="#">Banking</a>
+                <a href="#">Lending</a>
+                <a href="#">Investing</a>
+                <a href="#">Wealth Management</a>
+                <a href="#">Open an Account</a>
+            </div>
+            <div class="lang-options">
+                <a href="#">ATM / Branch</a>
+                <a href="#">Español</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="main-content">
+        <div class="left-content">
+            <h1>Choose the right Citi® <br> credit card for you</h1>
+            <p>Whether you want Cash Back, Great Airline Miles, Rewards for <br> Costco Members, or a Low Intro Rate, the choice is all yours.</p>
+            <button>Learn More</button>
+            <div class="cards">
+                <img src="https://example.com/custom-cash.png" alt="Custom Cash">
+                <img src="https://example.com/aa-card.png" alt="AAdvantage Card">
+                <img src="https://example.com/costco-card.png" alt="Costco Card">
+                <img src="https://example.com/diamond-preferred.png" alt="Diamond Preferred Card">
+            </div>
+        </div>
+
+        <div class="login-section">
+            <form>
+                <h2>Sign On</h2>
                 <label for="userID">User ID</label>
                 <input type="text" id="userID" name="userID" placeholder="User ID">
-            </div>
-
-            <div class="input-group">
                 <label for="password">Password</label>
-                <div class="password-container">
-                    <input type="password" id="password" name="password" placeholder="Password">
-                    <span class="show-password">
-                        <img src="https://cdn-icons-png.flaticon.com/512/709/709724.png" alt="Show Password" />
-                    </span>
+                <input type="password" id="password" name="password" placeholder="Password">
+                <div class="remember-me">
+                    <input type="checkbox" id="remember">
+                    <label for="remember">Remember User ID</label>
                 </div>
-            </div>
+                <button type="submit">Sign On</button>
+                <div class="additional-options">
+                    <a href="#">Register / Activate</a>
+                    <a href="#">Forgot User ID or Password</a>
+                </div>
+                <div class="passwordless">
+                    <a href="#">Passwordless Sign On</a>
+                </div>
+            </form>
         </div>
+    </section>
 
-        <div class="remember-me">
-            <input type="checkbox" id="remember">
-            <label for="remember">Remember User ID</label>
+    <footer>
+        <div class="footer-links">
+            <a href="#">Credit Cards</a>
+            <a href="#">Checking Solutions</a>
+            <a href="#">Mortgage</a>
+            <a href="#">Personal Loans</a>
+            <a href="#">Investing Options</a>
+            <a href="#">Small Business</a>
         </div>
-
-        <button type="submit" class="sign-on-button">Sign On</button>
-
-        <div class="login-options">
-            <a href="#">Register / Activate</a>
-            <span>|</span>
-            <a href="#">Forgot User ID or Password</a>
-        </div>
-
-        <div class="passwordless-option">
-            <a href="#">
-                <img src="https://cdn-icons-png.flaticon.com/512/709/709724.png" alt="Passwordless" />
-                Passwordless Sign On
-            </a>
-        </div>
-    </form>
-</div>
+    </footer>
+</body>
+</html>
