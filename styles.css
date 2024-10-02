@@ -60,10 +60,11 @@ body {
 
 /* Ensure image inside cards div is bigger */
 .cards img {
-    width: 100%;
-    max-width: 700px;
-    height: auto;
+    width: 300px; /* Increase width */
+    height: auto; /* Keep aspect ratio */
+    margin: 10px;
 }
+
 
 
 .left-content h1 {
