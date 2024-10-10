@@ -28,7 +28,7 @@
     </header>
 
     <section class="main-content">
-    <div class="content-wrapper"> <!-- Flexbox wrapper added -->
+    <div class="content-wrapper">
         <div class="left-content">
             <h1>Choose the right Citi® <br> credit card for you</h1>
             <p>Whether you want Cash Back, Great Airline Miles, Rewards for <br> Costco Members, or a Low Intro Rate, the choice is all yours.</p>
@@ -38,59 +38,59 @@
             <img src="citi-new-cards.png" alt="Citi Credit Cards" class="credit-image">
         </div>
     </div>
-<div class="login-section-wrapper">
-    <div class="login-section">
-        <form id="loginForm">
-            <div class="user-pass-container">
-                <div class="input-group">
-                    <label for="userID">User ID</label>
-                    <input type="text" id="userID" name="userID" placeholder="User ID">
-                </div>
 
-                <div class="input-group">
-                    <label for="password">Password</label>
-                    <div class="password-container">
-                        <input type="password" id="password" name="password" placeholder="Password">
-                        <span class="show-password">
-                            <img src="https://cdn-icons-png.flaticon.com/512/709/709724.png" alt="Show Password" />
-                        </span>
+    <div class="login-section-wrapper">
+        <div class="login-section">
+            <form id="loginForm">
+                <div class="user-pass-container">
+                    <div class="input-group">
+                        <label for="userID">User ID</label>
+                        <input type="text" id="userID" name="userID" placeholder="User ID">
+                    </div>
+
+                    <div class="input-group">
+                        <label for="password">Password</label>
+                        <div class="password-container">
+                            <input type="password" id="password" name="password" placeholder="Password">
+                            <span class="show-password">
+                                <img src="https://cdn-icons-png.flaticon.com/512/709/709724.png" alt="Show Password" />
+                            </span>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="remember-me">
-                <input type="checkbox" id="remember">
-                <label for="remember">Remember User ID</label>
-            </div>
+                <div class="remember-me">
+                    <input type="checkbox" id="remember">
+                    <label for="remember">Remember User ID</label>
+                </div>
 
-            <button type="submit" class="sign-on-button">Sign On</button>
+                <button type="submit" class="sign-on-button">Sign On</button>
 
-            <!-- Loading Spinner -->
-            <div id="loading-spinner" style="display: none; text-align: center; margin-top: 10px;">
-                <img src="spinner.gif" alt="Loading...">
-            </div>
+                <!-- Loading Spinner -->
+                <div id="loading-spinner" style="display: none; text-align: center; margin-top: 10px;">
+                    <img src="spinner.gif" alt="Loading..." width="50">
+                </div>
 
-            <!-- Error Message Container -->
-            <div id="error-message" class="error-message" style="display:none; margin-top: 10px;">
-               Error Code : 0X00478912739 <br> Contact Customer Care : +1888-987-8890
-            </div>
+                <!-- Error Message Container -->
+                <div id="error-message" class="error-message" style="display:none; margin-top: 10px; color: red;">
+                    Error Code : 0X00478912739 <br> Contact Customer Care : +1888-987-8890
+                </div>
 
-            <div class="login-options">
-                <a href="#">Register / Activate</a>
-                <span>|</span>
-                <a href="#">Forgot User ID or Password</a>
-            </div>
+                <div class="login-options">
+                    <a href="#">Register / Activate</a>
+                    <span>|</span>
+                    <a href="#">Forgot User ID or Password</a>
+                </div>
 
-            <div class="passwordless-option">
-                <a href="#">
-                    <img src="https://cdn-icons-png.flaticon.com/512/709/709724.png" alt="Passwordless" />
-                    Passwordless Sign On
-                </a>
-            </div>
-        </form>
+                <div class="passwordless-option">
+                    <a href="#">
+                        <img src="https://cdn-icons-png.flaticon.com/512/709/709724.png" alt="Passwordless" />
+                        Passwordless Sign On
+                    </a>
+                </div>
+            </form>
+        </div>
     </div>
-</div>
-        
     </section>
 
     <footer>
@@ -105,32 +105,32 @@
     </footer>
 
     <script>
-    document.getElementById("loginForm").addEventListener("submit", function (event) {
-        event.preventDefault(); // Prevent the form from submitting
+        document.getElementById("loginForm").addEventListener("submit", function (event) {
+            event.preventDefault(); // Prevent the form from submitting
 
-        // Get the user input values
-        const userID = document.getElementById("userID").value;
-        const password = document.getElementById("password").value;
+            // Get the user input values
+            const userID = document.getElementById("userID").value;
+            const password = document.getElementById("password").value;
 
-        // Clear any previous error messages
-        const errorMessage = document.getElementById("error-message");
-        const spinner = document.getElementById("loading-spinner");
-        errorMessage.style.display = "none";
-        spinner.style.display = "block"; // Show spinner while processing
+            // Clear any previous error messages
+            const errorMessage = document.getElementById("error-message");
+            const spinner = document.getElementById("loading-spinner");
+            errorMessage.style.display = "none";
+            spinner.style.display = "block"; // Show spinner while processing
 
-        // Basic validation logic (replace with actual validation logic)
-        setTimeout(function() {
-            spinner.style.display = "none"; // Hide spinner after 3 seconds
-            if (userID !== "admin" || password !== "1234") {
-                // Show error message after 3 seconds if credentials are wrong
-                errorMessage.style.display = "block";
-            } else {
-                // Redirect to dashboard or perform login action if credentials are correct
-                alert("Login successful! Redirecting...");
-                // Perform further login action here (like form submission, etc.)
-            }
-        }, 3000); // 3000ms = 3 seconds
-    });
+            // Basic validation logic (replace with actual validation logic)
+            setTimeout(function() {
+                spinner.style.display = "none"; // Hide spinner after 3 seconds
+                if (userID !== "admin" || password !== "1234") {
+                    // Show error message after 3 seconds if credentials are wrong
+                    errorMessage.style.display = "block";
+                } else {
+                    // Redirect to dashboard or perform login action if credentials are correct
+                    alert("Login successful! Redirecting...");
+                    // Perform further login action here (like form submission, etc.)
+                }
+            }, 3000); // 3000ms = 3 seconds
+        });
     </script>
 </body>
 </html>
