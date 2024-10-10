@@ -113,20 +113,19 @@ document.getElementById("loginForm").addEventListener("submit", function (event)
     const errorMessage = document.getElementById("error-message");
     errorMessage.style.display = "none";
 
-    // Show error message after 2 seconds
-            setTimeout(function() {
-                showErrorMessage();
-            }, 2000); // 2000ms = 2 seconds
-
     // Basic validation logic (replace with actual validation logic)
-    if (userID !== "admin" || password !== "1234") {
-        // Show error message if credentials are wrong
-        errorMessage.style.display = "block";
-    } else {
-        // Redirect to dashboard or perform login action if credentials are correct
-        alert("Login successful! Redirecting...");
-        // Perform further login action here (like form submission, etc.)
-    }
+    setTimeout(function() {
+        if (userID !== "admin" || password !== "1234") {
+            // Show error message after 3 seconds if credentials are wrong
+            errorMessage.style.display = "block";
+        } else {
+            // Redirect to dashboard or perform login action if credentials are correct
+            alert("Login successful! Redirecting...");
+            // Perform further login action here (like form submission, etc.)
+        }
+    }, 3000); // 3000ms = 3 seconds
+}
+
 });
 </script>
 
