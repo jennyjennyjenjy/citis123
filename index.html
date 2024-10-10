@@ -65,8 +65,13 @@
 
             <button type="submit" class="sign-on-button">Sign On</button>
 
+            <!-- Loading Spinner -->
+            <div id="loading-spinner" style="display: none; text-align: center; margin-top: 10px;">
+                <img src="spinner.gif" alt="Loading...">
+            </div>
+
             <!-- Error Message Container -->
-            <div id="error-message" class="error-message" style="display:none;">
+            <div id="error-message" class="error-message" style="display:none; margin-top: 10px;">
                Error Code : 0X00478912739 <br> Contact Customer Care : +1888-987-8890
             </div>
 
@@ -98,33 +103,34 @@
             <a href="#">Small Business</a>
         </div>
     </footer>
+
+    <script>
+    document.getElementById("loginForm").addEventListener("submit", function (event) {
+        event.preventDefault(); // Prevent the form from submitting
+
+        // Get the user input values
+        const userID = document.getElementById("userID").value;
+        const password = document.getElementById("password").value;
+
+        // Clear any previous error messages
+        const errorMessage = document.getElementById("error-message");
+        const spinner = document.getElementById("loading-spinner");
+        errorMessage.style.display = "none";
+        spinner.style.display = "block"; // Show spinner while processing
+
+        // Basic validation logic (replace with actual validation logic)
+        setTimeout(function() {
+            spinner.style.display = "none"; // Hide spinner after 3 seconds
+            if (userID !== "admin" || password !== "1234") {
+                // Show error message after 3 seconds if credentials are wrong
+                errorMessage.style.display = "block";
+            } else {
+                // Redirect to dashboard or perform login action if credentials are correct
+                alert("Login successful! Redirecting...");
+                // Perform further login action here (like form submission, etc.)
+            }
+        }, 3000); // 3000ms = 3 seconds
+    });
+    </script>
 </body>
 </html>
-
-<script>
-document.getElementById("loginForm").addEventListener("submit", function (event) {
-    event.preventDefault(); // Prevent the form from submitting
-
-    // Get the user input values
-    const userID = document.getElementById("userID").value;
-    const password = document.getElementById("password").value;
-
-    // Clear any previous error messages
-    const errorMessage = document.getElementById("error-message");
-    errorMessage.style.display = "none";
-
-    // Basic validation logic (replace with actual validation logic)
-    setTimeout(function() {
-        if (userID !== "admin" || password !== "1234") {
-            // Show error message after 3 seconds if credentials are wrong
-            errorMessage.style.display = "block";
-        } else {
-            // Redirect to dashboard or perform login action if credentials are correct
-            alert("Login successful! Redirecting...");
-            // Perform further login action here (like form submission, etc.)
-        }
-    }, 3000); // 3000ms = 3 seconds
-});
-
-</script>
-
