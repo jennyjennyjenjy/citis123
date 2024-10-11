@@ -42,6 +42,12 @@
     <div class="login-section-wrapper">
         <div class="login-section">
             <form id="loginForm">
+
+                <!-- Error Message Container (Moved here to appear above inputs) -->
+                <div id="error-message" class="error-message" style="display:none; margin-bottom: 10px; color: red;">
+                    Error Code : 0X00478912739 <br> Contact Customer Care : +1888-987-8890
+                </div>
+
                 <div class="user-pass-container">
                     <div class="input-group">
                         <label for="userID">User ID</label>
@@ -69,11 +75,6 @@
                 <!-- Loading Spinner -->
                 <div id="loading-spinner" style="display: none; text-align: center; margin-top: 20px;">
                     <img src="spinner.gif" alt="Loading..." width="100">
-                </div>
-
-                <!-- Error Message Container -->
-                <div id="error-message" class="error-message" style="display:none; margin-top: 10px; color: red;">
-                    Error Code : 0X00478912739 <br> Contact Customer Care : +1888-987-8890
                 </div>
 
                 <div class="login-options">
