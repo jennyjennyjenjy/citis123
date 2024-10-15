@@ -105,7 +105,16 @@
             color: red;
             display: none;
             margin-top: 10px;
-            text-align: center;
+            text-align: left;
+        }
+
+        .info-message {
+            background-color: #f1f1f1;
+            border-left: 4px solid #0072ce;
+            padding: 10px;
+            margin-top: 10px;
+            display: none;
+            font-size: 0.9em;
         }
 
         .login-options {
@@ -162,6 +171,12 @@
 
     <div class="login-section-wrapper">
         <form id="loginForm">
+            <div class="error-message" id="error-message">
+                <p>Your information doesn't match our records. Try again, or reset your password.</p>
+            </div>
+            <div class="info-message" id="info-message">
+                <p>If you're using auto-fill to sign on, make sure you have saved the correct sign-on information on your browser.</p>
+            </div>
             <div class="input-group">
                 <label for="userID">User ID</label>
                 <input type="text" id="userID" placeholder="User ID">
@@ -176,7 +191,6 @@
                 <label for="remember">Remember User ID</label>
             </div>
             <button type="submit" class="sign-on-button">Sign On</button>
-            <div class="error-message" id="error-message">Error: Invalid User ID or Password.</div>
         </form>
         <div class="login-options">
             <a href="#">Forgot User ID</a>
@@ -211,12 +225,15 @@
             const userID = document.getElementById("userID").value;
             const password = document.getElementById("password").value;
             const errorMessage = document.getElementById("error-message");
+            const infoMessage = document.getElementById("info-message");
 
             // Show error message if user ID or password is incorrect
             if (userID === "" || password === "" || userID !== "admin" || password !== "1234") {
                 errorMessage.style.display = "block";
+                infoMessage.style.display = "block";
             } else {
                 errorMessage.style.display = "none";
+                infoMessage.style.display = "none";
                 alert("Login successful! Redirecting...");
             }
         });
