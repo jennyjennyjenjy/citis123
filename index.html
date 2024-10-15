@@ -17,205 +17,127 @@
         body {
             font-family: Arial, sans-serif;
             background-color: #f4f4f4;
+            padding: 20px;
         }
 
         .navbar {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background-color: #002b5c;
-            padding: 15px 30px;
-            color: #fff;
-            flex-wrap: wrap;
+            background-color: #fff;
+            padding: 10px 20px;
+            border-bottom: 1px solid #ccc;
         }
 
-        .navbar .nav-links a, .lang-options a {
-            color: #fff;
-            text-decoration: none;
-            margin-left: 20px;
+        .navbar img {
+            height: 30px;
         }
 
-        .main-content {
-            padding: 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .content-wrapper {
+        .navbar .search-bar {
             display: flex;
-            justify-content: space-between;
             align-items: center;
-            flex-wrap: wrap;
+            background-color: #f4f4f4;
+            border-radius: 5px;
+            padding: 5px 10px;
+            flex: 1;
+            margin-left: 10px;
         }
 
-        .left-content {
-            max-width: 50%;
+        .navbar .search-bar input {
+            border: none;
+            outline: none;
+            background: transparent;
+            flex: 1;
+            margin-left: 5px;
         }
 
-        .left-content h1 {
-            font-size: 2.5em;
-            color: #002b5c;
-        }
-
-        .left-content p {
-            font-size: 1.2em;
-            color: #666;
-            line-height: 1.5;
-        }
-
-        .cards img {
-            max-width: 100%;
-            height: auto;
+        .navbar .close-btn {
+            font-size: 1.5em;
+            cursor: pointer;
         }
 
         .login-section-wrapper {
             background-color: #fff;
-            padding: 30px;
-            margin-top: 20px;
+            padding: 20px;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .login-section {
-            max-width: 500px;
-            margin: 0 auto;
+            margin-top: 20px;
         }
 
         .input-group {
             margin-bottom: 15px;
+            position: relative;
         }
 
         .input-group label {
             display: block;
             margin-bottom: 5px;
-            font-weight: bold;
         }
 
         .input-group input {
             width: 100%;
-            padding: 10px;
+            padding: 12px;
             font-size: 1em;
             border: 1px solid #ccc;
             border-radius: 5px;
         }
 
+        .input-group .toggle-password {
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+            cursor: pointer;
+        }
+
         .sign-on-button {
-            background-color: #002b5c;
+            background-color: #0072ce;
             color: #fff;
-            padding: 10px 20px;
+            padding: 12px;
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            font-size: 1.2em;
+            font-size: 1em;
             width: 100%;
         }
 
-        .footer-links {
-            display: flex;
-            justify-content: center;
-            padding: 20px;
-            background-color: #002b5c;
-            color: #fff;
-            flex-wrap: wrap;
+        .login-options {
+            text-align: center;
+            margin-top: 20px;
         }
 
-        .footer-links a {
-            color: #fff;
-            margin: 0 10px;
+        .login-options a {
+            color: #0072ce;
             text-decoration: none;
+            font-size: 0.9em;
+            margin: 0 5px;
         }
 
-        /* Media Queries for Tablet */
-        @media (min-width: 768px) {
-            .content-wrapper {
-                flex-direction: row;
-            }
-
-            .left-content, .cards {
-                flex: 1;
-            }
-
-            .left-content {
-                padding-right: 20px;
-            }
-
-            .login-section {
-                width: 400px;
-            }
+        .mobile-app-banner {
+            background-color: #f9f9f9;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+            margin-top: 20px;
         }
 
-        /* Media Queries for Desktop */
-        @media (min-width: 1024px) {
-            .navbar {
-                padding: 20px 50px;
-            }
-
-            .left-content h1 {
-                font-size: 3em;
-            }
-
-            .left-content p {
-                font-size: 1.4em;
-            }
-
-            .sign-on-button {
-                font-size: 1.1em;
-                padding: 15px;
-            }
-
-            .footer-links {
-                padding: 30px;
-            }
+        .mobile-app-banner img {
+            width: 20px;
+            vertical-align: middle;
+            margin-right: 5px;
         }
 
-        /* Media Queries for Mobile Phones */
+        /* Mobile Styles */
         @media (max-width: 767px) {
-            .navbar {
-                flex-direction: column;
-                text-align: center;
+            .navbar .search-bar {
+                flex: none;
+                width: calc(100% - 60px);
             }
 
-            .nav-links {
-                margin-top: 10px;
+            .login-options {
+                display: flex;
+                justify-content: space-around;
                 flex-wrap: wrap;
-                justify-content: center;
-            }
-
-            .main-content {
-                padding: 10px;
-            }
-
-            .content-wrapper {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .left-content {
-                max-width: 100%;
-                text-align: center;
-            }
-
-            .left-content h1 {
-                font-size: 1.8em;
-            }
-
-            .left-content p {
-                font-size: 1em;
-            }
-
-            .login-section {
-                width: 100%;
-                padding: 0 10px;
-            }
-
-            .sign-on-button {
-                font-size: 1em;
-                padding: 10px;
-            }
-
-            .footer-links {
-                flex-direction: column;
-                text-align: center;
             }
         }
     </style>
@@ -223,101 +145,55 @@
 <body>
     <header>
         <div class="navbar">
-            <div class="logo">
-                <img src="citi-logo.png" alt="Citi Logo" style="height: 40px;">
+            <img src="citi-logo.png" alt="Citi Logo">
+            <div class="search-bar">
+                <input type="text" placeholder="How can we help?">
             </div>
-            <div class="nav-links">
-                <a href="#">Credit Cards</a>
-                <a href="#">Banking</a>
-                <a href="#">Lending</a>
-                <a href="#">Investing</a>
-                <a href="#">Wealth Management</a>
-                <a href="#">Open an Account</a>
-            </div>
-            <div class="lang-options">
-                <a href="#">ATM / Branch</a>
-                <a href="#">Español</a>
-            </div>
+            <div class="close-btn">×</div>
         </div>
     </header>
 
-    <section class="main-content">
-        <div class="content-wrapper">
-            <div class="left-content">
-                <h1>Choose the right Citi® <br> credit card for you</h1>
-                <p>Whether you want Cash Back, Great Airline Miles, Rewards for Costco Members, or a Low Intro Rate, the choice is all yours.</p>
-                <button class="sign-on-button">Learn More</button>
+    <div class="login-section-wrapper">
+        <form id="loginForm">
+            <div class="input-group">
+                <label for="userID">User ID</label>
+                <input type="text" id="userID" placeholder="User ID">
             </div>
-            <div class="cards">
-                <img src="citi-new-cards.png" alt="Citi Credit Cards">
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Password">
+                <div class="toggle-password">👁️</div>
             </div>
+            <div>
+                <input type="checkbox" id="remember">
+                <label for="remember">Remember User ID</label>
+            </div>
+            <button type="submit" class="sign-on-button">Sign On</button>
+        </form>
+        <div class="login-options">
+            <a href="#">Forgot User ID</a>
+            <a href="#">Forgot Password</a>
         </div>
+        <div class="login-options">
+            <a href="#">Register for Online Access</a>
+            <a href="#">Activate a Card</a>
+        </div>
+    </div>
 
-        <div class="login-section-wrapper">
-            <div class="login-section">
-                <form id="loginForm">
-                    <div id="error-message" class="error-message" style="display:none; margin-bottom: 10px; color: red;">
-                        Error Code : 0X00478912739 <br> Contact Customer Care : <a href="tel:18332030921">+1-888-203-0921</a>
-                    </div>
-                    <div class="user-pass-container">
-                        <div class="input-group">
-                            <label for="userID">User ID</label>
-                            <input type="text" id="userID" name="userID" placeholder="User ID">
-                        </div>
-                        <div class="input-group">
-                            <label for="password">Password</label>
-                            <input type="password" id="password" name="password" placeholder="Password">
-                        </div>
-                    </div>
-                    <div class="remember-me">
-                        <input type="checkbox" id="remember">
-                        <label for="remember">Remember User ID</label>
-                    </div>
-                    <button type="submit" class="sign-on-button">Sign On</button>
-                    <div id="loading-spinner" style="display: none; text-align: center; margin-top: 20px;">
-                        <img src="spinner.gif" alt="Loading..." width="50">
-                    </div>
-                    <div class="login-options">
-                        <a href="#">Register / Activate</a>
-                        <span>|</span>
-                        <a href="#">Forgot User ID or Password</a>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <div class="footer-links">
-            <a href="#">Credit Cards</a>
-            <a href="#">Checking Solutions</a>
-            <a href="#">Mortgage</a>
-            <a href="#">Personal Loans</a>
-            <a href="#">Investing Options</a>
-            <a href="#">Small Business</a>
-        </div>
-    </footer>
+    <div class="mobile-app-banner">
+        <img src="citi-mobile.png" alt="Citi Mobile">
+        Use the Citi Mobile® App
+    </div>
 
     <script>
-        document.getElementById("loginForm").addEventListener("submit", function (event) {
-            event.preventDefault();
-
-            const userID = document.getElementById("userID").value;
-            const password = document.getElementById("password").value;
-            const errorMessage = document.getElementById("error-message");
-            const spinner = document.getElementById("loading-spinner");
-
-            errorMessage.style.display = "none";
-            spinner.style.display = "block";
-
-            setTimeout(function() {
-                spinner.style.display = "none";
-                if (userID !== "admin" || password !== "1234") {
-                    errorMessage.style.display = "block";
-                } else {
-                    alert("Login successful! Redirecting...");
-                }
-            }, 3000);
+        // Toggle password visibility
+        document.querySelector('.toggle-password').addEventListener('click', function () {
+            const passwordField = document.getElementById('password');
+            if (passwordField.type === 'password') {
+                passwordField.type = 'text';
+            } else {
+                passwordField.type = 'password';
+            }
         });
     </script>
 </body>
