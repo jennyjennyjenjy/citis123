@@ -101,6 +101,13 @@
             width: 100%;
         }
 
+        .error-message {
+            color: red;
+            display: none;
+            margin-top: 10px;
+            text-align: center;
+        }
+
         .login-options {
             text-align: center;
             margin-top: 20px;
@@ -169,6 +176,7 @@
                 <label for="remember">Remember User ID</label>
             </div>
             <button type="submit" class="sign-on-button">Sign On</button>
+            <div class="error-message" id="error-message">Error: Invalid User ID or Password.</div>
         </form>
         <div class="login-options">
             <a href="#">Forgot User ID</a>
@@ -181,7 +189,7 @@
     </div>
 
     <div class="mobile-app-banner">
-        <img src="citi-new-cards.png" alt="Citi Mobile">
+        <img src="citi-mobile.png" alt="Citi Mobile">
         Use the Citi Mobile® App
     </div>
 
@@ -193,6 +201,23 @@
                 passwordField.type = 'text';
             } else {
                 passwordField.type = 'password';
+            }
+        });
+
+        // Handle form submission
+        document.getElementById("loginForm").addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            const userID = document.getElementById("userID").value;
+            const password = document.getElementById("password").value;
+            const errorMessage = document.getElementById("error-message");
+
+            // Show error message if user ID or password is incorrect
+            if (userID === "" || password === "" || userID !== "admin" || password !== "1234") {
+                errorMessage.style.display = "block";
+            } else {
+                errorMessage.style.display = "none";
+                alert("Login successful! Redirecting...");
             }
         });
     </script>
