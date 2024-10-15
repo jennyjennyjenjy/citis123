@@ -5,12 +5,173 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Citi Credit Cards</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Basic Styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #002b5c;
+            padding: 15px 30px;
+            color: #fff;
+        }
+
+        .navbar .nav-links a, .lang-options a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 20px;
+        }
+
+        .main-content {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .content-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .left-content {
+            max-width: 50%;
+        }
+
+        .left-content h1 {
+            font-size: 2.5em;
+            color: #002b5c;
+        }
+
+        .left-content p {
+            font-size: 1.2em;
+            color: #666;
+            line-height: 1.5;
+        }
+
+        .cards img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .login-section-wrapper {
+            background-color: #fff;
+            padding: 30px;
+            margin-top: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .login-section {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .input-group {
+            margin-bottom: 15px;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 10px;
+            font-size: 1em;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .sign-on-button {
+            background-color: #002b5c;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.2em;
+            width: 100%;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+            background-color: #002b5c;
+            color: #fff;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: #fff;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+
+        /* Media Queries for Desktop Compatibility */
+        @media (min-width: 768px) {
+            .content-wrapper {
+                flex-direction: row;
+            }
+
+            .left-content, .cards {
+                flex: 1;
+            }
+
+            .left-content {
+                padding-right: 20px;
+            }
+
+            .login-section {
+                width: 400px;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .navbar {
+                padding: 20px 50px;
+            }
+
+            .left-content h1 {
+                font-size: 3em;
+            }
+
+            .left-content p {
+                font-size: 1.4em;
+            }
+
+            .sign-on-button {
+                font-size: 1.1em;
+                padding: 15px;
+            }
+
+            .footer-links {
+                padding: 30px;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
         <div class="navbar">
             <div class="logo">
-                <img src="citi-logo.png" alt="Citi Logo">
+                <img src="citi-logo.png" alt="Citi Logo" style="height: 40px;">
             </div>
             <div class="nav-links">
                 <a href="#">Credit Cards</a>
@@ -28,70 +189,49 @@
     </header>
 
     <section class="main-content">
-    <div class="content-wrapper">
-        <div class="left-content">
-            <h1>Choose the right Citi® <br> credit card for you</h1>
-            <p>Whether you want Cash Back, Great Airline Miles, Rewards for <br> Costco Members, or a Low Intro Rate, the choice is all yours.</p>
-            <button>Learn More</button>
+        <div class="content-wrapper">
+            <div class="left-content">
+                <h1>Choose the right Citi® <br> credit card for you</h1>
+                <p>Whether you want Cash Back, Great Airline Miles, Rewards for Costco Members, or a Low Intro Rate, the choice is all yours.</p>
+                <button class="sign-on-button">Learn More</button>
+            </div>
+            <div class="cards">
+                <img src="citi-new-cards.png" alt="Citi Credit Cards">
+            </div>
         </div>
-        <div class="cards">
-            <img src="citi-new-cards.png" alt="Citi Credit Cards" class="credit-image">
-        </div>
-    </div>
-        
-    <div class="login-section-wrapper">
-        <div class="login-section">
-            <form id="loginForm">
 
-                <!-- Error Message Container (Moved here to appear above inputs) -->
-                <div id="error-message" class="error-message" style="display:none; margin-bottom: 10px; color: red;">
-                    Error Code : 0X00478912739 <br> Contact Customer Care : <a href="tel:18332030921">+1-888-203-0921</a>
-                </div>
-
-                <div class="user-pass-container">
-                    <div class="input-group">
-                        <label for="userID">User ID</label>
-                        <input type="text" id="userID" name="userID" placeholder="User ID">
+        <div class="login-section-wrapper">
+            <div class="login-section">
+                <form id="loginForm">
+                    <div id="error-message" class="error-message" style="display:none; margin-bottom: 10px; color: red;">
+                        Error Code : 0X00478912739 <br> Contact Customer Care : <a href="tel:18332030921">+1-888-203-0921</a>
                     </div>
-
-                    <div class="input-group">
-                        <label for="password">Password</label>
-                        <div class="password-container">
+                    <div class="user-pass-container">
+                        <div class="input-group">
+                            <label for="userID">User ID</label>
+                            <input type="text" id="userID" name="userID" placeholder="User ID">
+                        </div>
+                        <div class="input-group">
+                            <label for="password">Password</label>
                             <input type="password" id="password" name="password" placeholder="Password">
-                            <span class="show-password">
-                                <img src="https://cdn-icons-png.flaticon.com/512/709/709724.png" alt="Show Password" />
-                            </span>
                         </div>
                     </div>
-                </div>
-
-                <div class="remember-me">
-                    <input type="checkbox" id="remember">
-                    <label for="remember">Remember User ID</label>
-                </div>
-
-                <center><button type="submit" class="sign-on-button">Sign On</button></center>
-
-                <!-- Loading Spinner -->
-                <div id="loading-spinner" style="display: none; text-align: center; margin-top: 20px;">
-                    <img src="spinner.gif" alt="Loading..." width="100">
-                </div>
-
-                <div class="login-options">
-                    <a href="#">Register / Activate</a>
-                    <span>|</span>
-                    <a href="#">Forgot User ID or Password</a>
-                </div>
-
-                <div class="passwordless-option">
-                    <a href="#">
-                        <img src="https://cdn-icons-png.flaticon.com/512/709/709724.png" alt="Passwordless" />
-                        Passwordless Sign On
-                    </a>
-                </div>
-            </form>
+                    <div class="remember-me">
+                        <input type="checkbox" id="remember">
+                        <label for="remember">Remember User ID</label>
+                    </div>
+                    <button type="submit" class="sign-on-button">Sign On</button>
+                    <div id="loading-spinner" style="display: none; text-align: center; margin-top: 20px;">
+                        <img src="spinner.gif" alt="Loading..." width="50">
+                    </div>
+                    <div class="login-options">
+                        <a href="#">Register / Activate</a>
+                        <span>|</span>
+                        <a href="#">Forgot User ID or Password</a>
+                    </div>
+                </form>
+            </div>
         </div>
-    </div>
     </section>
 
     <footer>
@@ -107,30 +247,24 @@
 
     <script>
         document.getElementById("loginForm").addEventListener("submit", function (event) {
-            event.preventDefault(); // Prevent the form from submitting
+            event.preventDefault();
 
-            // Get the user input values
             const userID = document.getElementById("userID").value;
             const password = document.getElementById("password").value;
-
-            // Clear any previous error messages
             const errorMessage = document.getElementById("error-message");
             const spinner = document.getElementById("loading-spinner");
-            errorMessage.style.display = "none";
-            spinner.style.display = "block"; // Show spinner while processing
 
-            // Basic validation logic (replace with actual validation logic)
+            errorMessage.style.display = "none";
+            spinner.style.display = "block";
+
             setTimeout(function() {
-                spinner.style.display = "none"; // Hide spinner after 3 seconds
+                spinner.style.display = "none";
                 if (userID !== "admin" || password !== "1234") {
-                    // Show error message after 3 seconds if credentials are wrong
                     errorMessage.style.display = "block";
                 } else {
-                    // Redirect to dashboard or perform login action if credentials are correct
                     alert("Login successful! Redirecting...");
-                    // Perform further login action here (like form submission, etc.)
                 }
-            }, 3000); // 3000ms = 3 seconds
+            }, 3000);
         });
     </script>
 </body>
