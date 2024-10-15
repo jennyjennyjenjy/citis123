@@ -26,6 +26,7 @@
             background-color: #002b5c;
             padding: 15px 30px;
             color: #fff;
+            flex-wrap: wrap;
         }
 
         .navbar .nav-links a, .lang-options a {
@@ -124,7 +125,7 @@
             text-decoration: none;
         }
 
-        /* Media Queries for Desktop Compatibility */
+        /* Media Queries for Tablet */
         @media (min-width: 768px) {
             .content-wrapper {
                 flex-direction: row;
@@ -143,6 +144,7 @@
             }
         }
 
+        /* Media Queries for Desktop */
         @media (min-width: 1024px) {
             .navbar {
                 padding: 20px 50px;
@@ -163,6 +165,57 @@
 
             .footer-links {
                 padding: 30px;
+            }
+        }
+
+        /* Media Queries for Mobile Phones */
+        @media (max-width: 767px) {
+            .navbar {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .nav-links {
+                margin-top: 10px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .main-content {
+                padding: 10px;
+            }
+
+            .content-wrapper {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .left-content {
+                max-width: 100%;
+                text-align: center;
+            }
+
+            .left-content h1 {
+                font-size: 1.8em;
+            }
+
+            .left-content p {
+                font-size: 1em;
+            }
+
+            .login-section {
+                width: 100%;
+                padding: 0 10px;
+            }
+
+            .sign-on-button {
+                font-size: 1em;
+                padding: 10px;
+            }
+
+            .footer-links {
+                flex-direction: column;
+                text-align: center;
             }
         }
     </style>
